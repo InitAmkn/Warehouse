@@ -34,14 +34,14 @@ namespace Warehouse.model
             List<BoxWithContents> approvedBoxes = new List<BoxWithContents>();
             foreach (BoxWithContents item in boxes)
             {
-                bool doesThisBoxFit = true;
+                bool isThisBoxSuitable = true;
 
                 if (pallet.Length < item.Length && pallet.Length < item.Width ||
                     pallet.Width < item.Width && pallet.Width < item.Length)
                 {
-                    doesThisBoxFit = false;
+                    isThisBoxSuitable = false;
                 }
-                if (doesThisBoxFit) { approvedBoxes.Add(item); }
+                if (isThisBoxSuitable) { approvedBoxes.Add(item); }
             }
             return approvedBoxes;
         }
