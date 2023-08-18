@@ -59,7 +59,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="model\Place.cs" />
+    <Compile Include="model\Box.cs" />
+    <Compile Include="model\PalletWithBoxes.cs" />
+    <Compile Include="model\Pallet.cs" />
+    <Compile Include="model\Sorage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
