@@ -6,13 +6,25 @@ using System.Threading.Tasks;
 
 namespace Warehouse.model
 {
-    public class Box : Sorage
+    internal class Box : IStorage, IHaveWeight
     {
-        public int id => throw new NotImplementedException();
 
-        public double length { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public double width { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public double height { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public double weight { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int id { get; private set; }
+
+        public double length { get; private set; }
+        public double width { get; private set; }
+        public double height { get; private set; }
+        public double weight { get; private set; }
+
+
+
+        public Box(double length, double width, double height, double weight)
+        {
+            this.length = length;
+            this.width = width;
+            this.height = height;
+            this.weight = weight;
+          
+        }
     }
 }

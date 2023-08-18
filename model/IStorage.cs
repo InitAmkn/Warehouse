@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Warehouse.model
 {
-    internal interface Sorage
+    internal interface IStorage
     {
         int id { get; }
-        double length { set; get; }
-        double width { set; get; }
-        double height { set; get; }
-        double weight { set; get; }
+        double length { get; }
+        double width { get; }
+        double height { get; }
 
     }
 }

@@ -60,9 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="model\Box.cs" />
+    <Compile Include="model\BoxWithContents.cs" />
+    <Compile Include="model\IHaveExpirationDate.cs" />
+    <Compile Include="model\IHaveWeight.cs" />
     <Compile Include="model\PalletWithBoxes.cs" />
     <Compile Include="model\Pallet.cs" />
-    <Compile Include="model\Sorage.cs" />
+    <Compile Include="model\IStorage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
