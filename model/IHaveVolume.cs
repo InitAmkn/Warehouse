@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Warehouse.model
 {
-    internal interface IStorage
+    internal interface IHaveVolume
     {
-        int id { get; }
-        double length { get; }
-        double width { get; }
-        double height { get; }
-
+        double Volume { get; }
     }
 }

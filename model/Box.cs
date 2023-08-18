@@ -1,30 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Warehouse.model
 {
-    internal class Box : IStorage, IHaveWeight
+    internal class Box : Storage, IHaveWeight
     {
-
-        public int id { get; private set; }
-
-        public double length { get; private set; }
-        public double width { get; private set; }
-        public double height { get; private set; }
-        public double weight { get; private set; }
-
-
-
-        public Box(double length, double width, double height, double weight)
+        public virtual double Weight { get; private set; }
+        public Box(double length, double width, double height, double Weight) : base(length, width, height)
         {
-            this.length = length;
-            this.width = width;
-            this.height = height;
-            this.weight = weight;
-          
+            this.Weight = Weight;
+        }
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append($"box: {Length}х{Width}х{Height}; ");
+            sb.Append("\n");
+            return sb.ToString();
         }
     }
 }
