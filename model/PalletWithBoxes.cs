@@ -25,7 +25,7 @@ namespace Warehouse.model
                 setWeight();
                 setVolume();
             }
-            catch (Exception e) { Console.WriteLine(e.Message); }
+            catch (NoBoxesFoundException e) { Console.WriteLine(e.Message); }
         }
 
         private List<BoxWithContents> setBoxesWithContents(List<BoxWithContents> boxes)
@@ -51,7 +51,7 @@ namespace Warehouse.model
         {
             if (boxes.Count() <= 0)
             {
-                throw new Exception("На паллете нет коробок");
+                throw new NoBoxesFoundException("На паллете нет коробок");
             }
 
             DateTime minDays = boxes[0].expirationDate;
@@ -70,7 +70,7 @@ namespace Warehouse.model
             if (boxes.Count() <= 0)
             {
                 Weight = pallet.Weight;
-                throw new Exception("На паллете нет коробок");
+                throw new NoBoxesFoundException("На паллете нет коробок");
             }
             Weight = boxes.Sum(x => x.Weight) + pallet.Weight;
         }
@@ -80,7 +80,7 @@ namespace Warehouse.model
             if (boxes.Count() <= 0)
             {
                 Volume = pallet.Volume;
-                throw new Exception("На паллете нет коробок");
+                throw new NoBoxesFoundException("На паллете нет коробок");
             }
             Volume = boxes.Sum(x => x.Volume) + pallet.Volume;
         }
