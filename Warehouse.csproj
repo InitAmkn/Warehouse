@@ -61,11 +61,11 @@
   <ItemGroup>
     <Compile Include="model\Box.cs" />
     <Compile Include="model\BoxWithContents.cs" />
+    <Compile Include="model\CannotAddException.cs" />
     <Compile Include="model\IHaveExpirationDate.cs" />
     <Compile Include="model\IHaveVolume.cs" />
     <Compile Include="model\IHaveWeight.cs" />
-    <Compile Include="model\NoBoxesFoundException.cs" />
-    <Compile Include="model\PalletWithBoxes.cs" />
+    <Compile Include="model\PalletWithContents.cs" />
     <Compile Include="model\Pallet.cs" />
     <Compile Include="model\Storage.cs" />
     <Compile Include="Program.cs" />

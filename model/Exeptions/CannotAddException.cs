@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Warehouse.model
 {
-    internal interface IHaveVolume
+    internal class CannotAddException : Exception
     {
-        double Volume { get; }
+        public CannotAddException(string massage) : base(massage) { }
+
     }
 }

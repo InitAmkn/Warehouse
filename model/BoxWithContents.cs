@@ -24,6 +24,7 @@ namespace Warehouse.model
             StringBuilder sb = new StringBuilder();
             sb.Append(base.ToString());
             sb.Append($"Production date: {this.productionDate}; ");
+            sb.Append("\n");
             sb.Append($"Expiration date: {this.expirationDate}; ");
             return sb.ToString();
         }

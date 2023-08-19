@@ -1,6 +1,4 @@
-﻿
-
-namespace Warehouse.model
+﻿namespace Warehouse.model
 {
     internal interface IHaveWeight
     {
