@@ -22,7 +22,7 @@ namespace Warehouse.model
             contains = new List<Storage>();
         }
 
-        public void addContains(Storage storage)
+        public bool addContains(Storage storage)
         {
             try
             {
@@ -32,25 +32,27 @@ namespace Warehouse.model
                     if (storage is IHaveExpirationDate) setExpirationDate(storage as IHaveExpirationDate);
                     if (storage is IHaveWeight) setWeight(storage as IHaveWeight);
                     setVolume(storage);
+                    return true;
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"\n--\nНе добавлен: { storage}");
                 Console.WriteLine(ex.Message);
             }
+            return false;
         }
 
 
         private bool contentApprovalSizes(Storage storage)
         {
 
-            if (pallet.Length < storage.Length && pallet.Length < storage.Width ||
-                pallet.Width < storage.Width && pallet.Width < storage.Length)
+            if (storage.Length < pallet.Length && storage.Width < pallet.Width ||
+             storage.Width < pallet.Length && storage.Length < pallet.Width)
             {
-                throw new CannotAddException($" \nНеподходящий габарит \n--\n");
+                return true;
+
             }
-            return true;
+            throw new CannotAddException($" \nНеподходящий габарит \n--\n");
         }
 
 
@@ -82,7 +84,7 @@ namespace Warehouse.model
             StringBuilder sb = new StringBuilder();
             sb.Append("\n_________________________\n");
             sb.Append(pallet);
-           
+
             sb.Append("\nContains: \n--\n");
             foreach (Storage item in contains)
             {
@@ -99,6 +101,9 @@ namespace Warehouse.model
 
             return sb.ToString();
         }
+
+
+
     }
 }
 

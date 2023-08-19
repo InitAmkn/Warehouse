@@ -13,8 +13,9 @@ namespace Warehouse.model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append($"Pallet: {Length}х{Width}х{Height};");
-
+            sb.Append("\n");
+            sb.Append($"Pallet: Id:{Id}; Dimensions: {Length}х{Width}х{Height};");
+            sb.Append("\n");
             return sb.ToString();
         }
 

@@ -65,11 +65,17 @@
     <Compile Include="model\Interfaces\IHaveExpirationDate.cs" />
     <Compile Include="model\Interfaces\IHaveVolume.cs" />
     <Compile Include="model\Interfaces\IHaveWeight.cs" />
+    <Compile Include="model\PalletsAutoFilling.cs" />
     <Compile Include="model\PalletWithContents.cs" />
     <Compile Include="model\Pallet.cs" />
     <Compile Include="model\Storage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlControllers\ReaderPalletSQL.cs" />
+    <Compile Include="SqlControllers\ReaderBoxWithContentsSQL.cs" />
+    <Compile Include="SqlControllers\FillingPalletsSQL.cs" />
+    <Compile Include="SqlControllers\GenerationRandomPalletsSQL.cs" />
+    <Compile Include="SqlControllers\GenerationRandomBoxesSQL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -95,8 +101,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SqlControllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

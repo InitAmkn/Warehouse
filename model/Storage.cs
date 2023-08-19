@@ -21,5 +21,9 @@
             Volume = Length * Width * Height;
         }
 
+        public void SetID(int id)
+        {
+            Id = id;
+        }
     }
 }
