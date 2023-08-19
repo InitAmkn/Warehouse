@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Warehouse.model
 {
-    internal class Box : Storage, IHaveWeight
+    internal abstract class Box : Storage, IHaveWeight
     {
         public virtual double Weight { get; private set; }
         public Box(double length, double width, double height, double Weight) : base(length, width, height)

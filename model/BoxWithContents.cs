@@ -14,11 +14,12 @@ namespace Warehouse.model
             this.productionDate = productionDate;
             this.expirationDate = productionDate.AddDays(shelfLife);
         }
-
-        public void setExpirationDate(DateTime expirationDate)
+        public BoxWithContents(double length, double width, double height, double weight, DateTime productionDate, DateTime expirationDate) : base(length, width, height, weight)
         {
+            this.productionDate = productionDate;
             this.expirationDate = expirationDate;
         }
+
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
