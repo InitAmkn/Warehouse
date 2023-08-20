@@ -1,6 +1,7 @@
-﻿CREATE TABLE [dbo].[PalletWithContents]
-(
-	[Id] INT NOT NULL PRIMARY KEY, 
-    [IdPallet] INT NOT NULL, 
-    [IdBox] INT NOT NULL
-)
+﻿CREATE TABLE [dbo].[PalletWithContents] (
+    [Id]       INT IDENTITY (1, 1) NOT NULL,
+    [IdPallet] INT NULL,
+    [IdBox]    INT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

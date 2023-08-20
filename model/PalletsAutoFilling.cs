@@ -41,12 +41,12 @@ namespace Warehouse.model
             {
                 foreach (var item in filledPallets)
                 {
-                    if (item.addContains(contains[0]))
+                    if (item.addContains(contains[contains.Count-1]))
                     {
                         break;
                     }
                 } 
-                contains.Remove(contains[0]);
+                contains.Remove(contains[contains.Count - 1]);
             }
         }
 
