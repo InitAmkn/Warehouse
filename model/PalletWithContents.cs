@@ -20,6 +20,9 @@ namespace Warehouse.model
         {
             this.pallet = pallet;
             contains = new List<Storage>();
+this.Weight = pallet.Weight;
+this.Volume = pallet.Volume;
+
         }
 
         public bool addContains(Storage storage)
@@ -70,12 +73,12 @@ namespace Warehouse.model
 
         private void setWeight(IHaveWeight content)
         {
-            Weight = Weight + pallet.Weight + content.Weight;
+            Weight = Weight + content.Weight;
         }
 
         private void setVolume(IHaveVolume content)
         {
-            Volume = Volume + pallet.Volume + content.Volume;
+            Volume = Volume + content.Volume;
         }
 
 
