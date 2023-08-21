@@ -20,8 +20,8 @@ namespace Warehouse.model
         {
             this.pallet = pallet;
             contains = new List<Storage>();
-this.Weight = pallet.Weight;
-this.Volume = pallet.Volume;
+            this.Weight = pallet.Weight;
+            this.Volume = pallet.Volume;
 
         }
 
